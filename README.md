@@ -28,3 +28,9 @@ node-sass 와 sass-loader 를 설치하여 sass 적용 css모듈을 편하게 �
 ```terminal
 $ yarn add node-sass sass-loader classnames
 ```
+
+#### 라우터와 리덕스 적용
+```terminal
+$ yarn add react-router-dom redux redux-actions react-redux redux-pender immutable
+```
+##### 루트 컴포넌트 설정
