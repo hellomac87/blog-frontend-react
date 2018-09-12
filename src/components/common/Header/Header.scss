@@ -1,0 +1,31 @@
+@import 'utils';
+
+.header{
+    background: $oc-blue-6;
+    .header-content{
+        height: 5rem;
+        width: 1400px;
+        margin: 0 auto;
+        padding: 0 3rem;
+
+        display: flex;
+        align-items: center;
+
+        // 반응형
+        @include media('<wide'){
+            width:100%;
+        }
+        @include media('<medium'){
+            padding: 0 1rem;
+        }
+
+        .brand{
+            color:#fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .right{
+            margin-left: auto;
+        }
+    }
+}
