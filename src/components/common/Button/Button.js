@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 // 전달받은 className, onClick 등 값들이 rest 안에 들어 있습니다.
 
 // JSX 에서 ... 을 사용하면 내부에 있는 값들을 props 로 넣어 줍니다.
-const Div = ({children, rest}) => <div {...rest}>{children}</div>
+const Div = ({children, ...rest}) => <div {...rest}>{children}</div>
 
 const Button = ({
     children, to, onClick, disabled, theme = 'default'
