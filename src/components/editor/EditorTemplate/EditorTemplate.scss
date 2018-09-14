@@ -1,0 +1,23 @@
+@import 'utils';
+
+.editor-template{
+    .panes{
+        height:calc(100vh - 4rem);
+        display: flex;
+        position: relative;
+        
+        .pane{
+            display: flex;
+            min-width: 0;
+            overflow: auto;
+        }
+        .separator{
+            width:1rem;
+            height:100%;
+            position: absolute;
+            transform: translate(-50%);
+            cursor: col-resize;
+            // background: #000;
+        }
+    }
+}
