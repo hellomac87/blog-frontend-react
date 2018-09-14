@@ -19,5 +19,14 @@
             cursor: col-resize;
             // background: #000;
         }
+
+        @include media("<medium"){
+            .editor{
+                flex:1 !important;
+            }
+            .preview, .separator{
+                display: none;
+            }
+        }
     }
 }
