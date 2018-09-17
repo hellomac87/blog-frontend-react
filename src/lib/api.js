@@ -2,5 +2,5 @@
 import axios from 'axios';
 
 // 글 작성 API 함수
-export const writePost = ({title, body, tags}) => axios.post('./api/posts', {title, body, tags});
+export const writePost = ({title, body, tags}) => axios.post('/api/posts', {title, body, tags});
 
