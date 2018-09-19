@@ -53,7 +53,7 @@ class EditorPane extends Component {
         });
     }
 
-    conponentDidUpdate(prevProps, prevState){
+    componentDidUpdate(prevProps, prevState){
         // markdown 이 변경되면 에디터 값도 변경합니다.
         // 이 과정에서 텍스트 커서의 위치가 초기화 되기 떄문에
         // 저장한 커서의 위치가 있으면 해당 위치로 설정합니다.
@@ -64,6 +64,7 @@ class EditorPane extends Component {
             if(!cursor) return; // 커서가 없을 때
             codeMirror.setCursor(cursor);
         }
+        
     }
 
     render() {

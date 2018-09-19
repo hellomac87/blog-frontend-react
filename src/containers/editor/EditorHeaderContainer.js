@@ -6,7 +6,20 @@ import { withRouter } from 'react-router-dom';
 
 import * as editorActions from 'store/modules/editor';
 
+import queryString from 'query-string';
+
 class EditorHeaderContainer extends Component {
+    componentDidMount(){
+        const { EditorActions, location } = this.props;
+        EditorActions.initialize(); // 에디터 초기화
+
+        // 쿼리 파싱
+        const { id } = queryString.parse(location.search);
+        if(id){
+            // id 가 존재한다면 포스트 불러오기
+            EditorActions.getPost(id);
+        }
+    }
     handleGoBack = () => {
         const { history } = this.props;
         history.goBack();
