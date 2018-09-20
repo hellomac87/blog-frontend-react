@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from "./AskRemoveModal.scss";
 import classNames from "classnames/bind";
-import ModalWrapper from "components/modal/Modal/ModalWrapper/ModalWrapper";
+import ModalWrapper from "components/modal/ModalWrapper/ModalWrapper";
 import Button from 'components/common/Button/Button';
 
 const cx = classNames.bind(styles);
 
-const AskRemoveModal = () => {
+const AskRemoveModal = ({visible, onConfirm, onCancel}) => {
     return (
-        <ModalWrapper>
+        <ModalWrapper visible={visible}>
             <div className={cx('question')}>
                 <div className={cx('title')}>포스트 삭제</div>
                 <div className={cx('description')}>
@@ -16,8 +16,8 @@ const AskRemoveModal = () => {
                 </div>
             </div>
             <div className={cx('options')}>
-                <Button theme="gray">취소</Button>
-                <Button>삭제</Button>
+                <Button theme="gray" onCancel={onCancel}>취소</Button>
+                <Button onClick={onConfirm}>삭제</Button>
             </div>
         </ModalWrapper>
     );
