@@ -12,4 +12,4 @@ export const getPost = (id) => axios.get(`/api/posts/${id}`);
 export const getPostList = ({ tag, page }) => axios.get(`/api/posts/?${queryString.stringify({tag, page})}`);
 
 // 포스트 수정 API 함수
-export const editPost = ({id, title, body, tags}) => axios.patch(`/api/post/${id}`,{title, body, tags});
+export const editPost = ({id, title, body, tags}) => axios.patch(`/api/posts/${id}`,{title, body, tags});
