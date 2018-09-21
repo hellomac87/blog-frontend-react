@@ -13,3 +13,6 @@ export const getPostList = ({ tag, page }) => axios.get(`/api/posts/?${queryStri
 
 // 포스트 수정 API 함수
 export const editPost = ({id, title, body, tags}) => axios.patch(`/api/posts/${id}`,{title, body, tags});
+
+// 포스트 삭제 API 함수
+export const removePost = (id) => axios.delete(`/api/posts/${id}`);
