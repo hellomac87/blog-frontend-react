@@ -11,6 +11,7 @@ class AskRemoveModalContainer extends Component {
     handleCancel = () => {
         const { BaseActions } = this.props;
         BaseActions.hideModal('remove');
+        console.log('aa');
     }
     handleConfirm = async () => {
         const { BaseActions, PostActions, history, match } = this.props;

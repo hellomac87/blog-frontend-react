@@ -16,7 +16,7 @@ const AskRemoveModal = ({visible, onConfirm, onCancel}) => {
                 </div>
             </div>
             <div className={cx('options')}>
-                <Button theme="gray" onCancel={onCancel}>취소</Button>
+                <Button theme="gray" onClick={onCancel}>취소</Button>
                 <Button onClick={onConfirm}>삭제</Button>
             </div>
         </ModalWrapper>
