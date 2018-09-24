@@ -6,14 +6,15 @@ import Button from "components/common/Button/Button";
 
 const cx = classNames.bind(styles);
 
-const Header = ({postId, onRemove}) => {
+const Header = ({ postId, logged, onRemove}) => {
     return (
         <div className={cx('header')}>
             <div className={cx('header-content')}>
                 <div className={cx('brand')}>
                     <Link to="/">react blog</Link>
                 </div>
-                <div className={cx('right')}>
+
+                {  logged && <div className={cx('right')}>
                     {
                         // flex 를 유지하기 위해 배열 형태로 렌더링한다.
                         postId && [
@@ -22,7 +23,7 @@ const Header = ({postId, onRemove}) => {
                         ]        
                     }
                     <Button theme="outline" to="/editor">새 포스트</Button>
-                </div>
+                </div> }
             </div>    
         </div>
     );
