@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
-const Footer = ({onLoginClick}) => {
+const Footer = ({onLoginClick, logged}) => {
   return (
       <footer className={cx("footer")}>
         <Link to="/">
@@ -14,7 +14,7 @@ const Footer = ({onLoginClick}) => {
             </div>
         </Link>
         <div onClick={onLoginClick} className={cx("admin-login")}>
-            관리자 로그인
+              {logged ? '로그아웃' : '관리자 로그인'}
         </div>
       </footer>
   );
