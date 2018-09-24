@@ -16,3 +16,10 @@ export const editPost = ({id, title, body, tags}) => axios.patch(`/api/posts/${i
 
 // 포스트 삭제 API 함수
 export const removePost = (id) => axios.delete(`/api/posts/${id}`);
+
+// 로그인 API 연동 함수 (로그인, 로그인 체크, 로그아웃)
+export const login = (password) => axios.post(`/api/auth/login`, {password});
+
+export const checkLogin = () => axios.get(`/api/auth/check`);
+
+export const logout = () => axios.post(`/api/auth/logout`);
