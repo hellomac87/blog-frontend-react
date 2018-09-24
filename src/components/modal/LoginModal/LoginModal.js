@@ -9,7 +9,7 @@ const LoginModal = ({
     visible, password, error, onCancel, onLogin, onChange, onKeyPress
 }) => {
     return (
-        <ModalWrapper>
+        <ModalWrapper visible={visible}>
             <div className={cx('form')}>
                 <div onClick={onCancel} className={cx('close')}>&times;</div>
                 <div className={cx('title')}>로그인</div>
